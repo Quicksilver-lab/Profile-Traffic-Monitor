@@ -1,7 +1,7 @@
 // script.js
 
 const GITHUB_API_URL = "https://api.github.com";
-const ACCESS_TOKEN = "your_personal_access_token"; // Replace with your token
+const ACCESS_TOKEN = "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"; // Replace with your token
 
 async function fetchData(url) {
     const response = await fetch(url, {
@@ -29,7 +29,7 @@ async function getAllRepos(user) {
 }
 
 async function loadData() {
-    const user = "your_github_username"; // Replace with your GitHub username
+    const user = "Quicksilver-lab"; // Replace with your GitHub username
     const repos = await getAllRepos(user);
 
     let totalViews = 0;
