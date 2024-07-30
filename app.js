@@ -4,6 +4,7 @@ const username = 'Quicksilver-lab'; // Replace with your GitHub username
 const userUrl = `https://api.github.com/users/${username}`;
 const reposUrl = `https://api.github.com/users/${username}/repos`;
 
+// Fetch user profile information
 fetch(userUrl)
     .then(response => response.json())
     .then(userData => {
@@ -11,6 +12,7 @@ fetch(userUrl)
         document.getElementById('public-repos').innerText = `Public Repositories: ${userData.public_repos}`;
     });
 
+// Fetch repositories and commits information
 fetch(reposUrl)
     .then(response => response.json())
     .then(reposData => {
@@ -38,12 +40,13 @@ function displayCharts(repoNames, commitCounts) {
             datasets: [{
                 label: 'Number of Commits',
                 data: commitCounts,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 1
             }]
         },
         options: {
+            responsive: true,
             scales: {
                 y: {
                     beginAtZero: true
@@ -59,12 +62,14 @@ function displayCharts(repoNames, commitCounts) {
             datasets: [{
                 label: 'Commits Over Repositories',
                 data: commitCounts,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                fill: true
             }]
         },
         options: {
+            responsive: true,
             scales: {
                 y: {
                     beginAtZero: true
