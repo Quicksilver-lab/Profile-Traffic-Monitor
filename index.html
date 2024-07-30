@@ -9,26 +9,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>GitHub Profile Traffic Monitor</h1>
-        <div class="profile-info">
-            <h2 id="username"></h2>
-            <p id="public-repos"></p>
-        </div>
-        <div class="charts">
-            <canvas id="repoChart"></canvas>
-            <canvas id="commitChart"></canvas>
-        </div>
-        <table id="repoTable">
-            <thead>
-                <tr>
-                    <th>Repository Name</th>
-                    <th>Commits</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        <header>
+            <h1>GitHub Profile Traffic Monitor</h1>
+            <div class="profile-info">
+                <h2 id="username"></h2>
+                <p id="public-repos"></p>
+            </div>
+        </header>
+        <main>
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="repoChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="commitChart"></canvas>
+                </div>
+            </div>
+            <div class="table-container">
+                <h3>Repository Commit Details</h3>
+                <table id="repoTable">
+                    <thead>
+                        <tr>
+                            <th>Repository Name</th>
+                            <th>Commits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
+    <footer>
+        <p>Created by Quicksilver</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
