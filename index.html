@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Traffic Monitor</title>
+    <title>GitHub Profile Traffic Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dashboard">
-        <h1>GitHub Traffic Monitor</h1>
-        <div class="summary">
-            <div class="card" id="total-views">Total Views: 0</div>
-            <div class="card" id="unique-visitors">Unique Visitors: 0</div>
-            <div class="card" id="total-clones">Total Clones: 0</div>
-            <div class="card" id="popular-repo">Most Popular Repo: N/A</div>
+    <div class="container">
+        <h1>GitHub Profile Traffic Monitor</h1>
+        <div class="profile-info">
+            <h2 id="username"></h2>
+            <p id="public-repos"></p>
         </div>
         <div class="charts">
-            <canvas id="views-chart"></canvas>
-            <canvas id="clones-chart"></canvas>
+            <canvas id="repoChart"></canvas>
+            <canvas id="commitChart"></canvas>
         </div>
+        <table id="repoTable">
+            <thead>
+                <tr>
+                    <th>Repository Name</th>
+                    <th>Commits</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
